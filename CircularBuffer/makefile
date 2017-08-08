@@ -8,4 +8,4 @@ run: all
 
 
 clean:
-	rm $(PROG)
+	rm $(PROG) -f
