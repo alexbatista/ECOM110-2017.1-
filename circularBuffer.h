@@ -1,9 +1,8 @@
+//https://stackoverflow.com/questions/827691/how-do-you-implement-a-circular-buffer-in-c
 
 #ifndef CIRCULAR_BUFFER_H
 #define CIRCULAR_BUFFER_H
 
-//#include <stdint.h>
-//https://stackoverflow.com/questions/827691/how-do-you-implement-a-circular-buffer-in-c
 #include <stdlib.h>
 #include <string.h>
 #include <time.h>

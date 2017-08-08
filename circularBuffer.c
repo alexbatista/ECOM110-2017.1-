@@ -5,8 +5,7 @@ void cb_init(circular_buffer *cb, size_t capacity, size_t sz)
 {
     cb->buffer = malloc(capacity * sz);
     if(cb->buffer == NULL){
-        // handle error
-			printf("Error no malloc\n");			
+			printf("malloc error\n");			
 		}
 
     cb->buffer_end = (char *)cb->buffer + capacity * sz;
@@ -24,14 +23,13 @@ void cb_free(circular_buffer *cb)
 	free(cb->head);
 	free(cb->tail);
 	free(cb);
-    // clear out other fields too, just to be safe
 }
 
 status cb_push_back(circular_buffer *cb, const void *item)
 {
 	status statusRingBuffer;
     if(cb->count == cb->capacity){
-        printf("The ring buffer is full\n");
+        printf("\n\nNow, the ring buffer is full\n\n");
 		statusRingBuffer = FULL;
     }else{
 		statusRingBuffer = NORMAL;

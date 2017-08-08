@@ -1,4 +1,4 @@
-PROG = main
+PROG = ring
 
 all: main.o circularBuffer.o
 	$(CC) $^ -o $(PROG)
